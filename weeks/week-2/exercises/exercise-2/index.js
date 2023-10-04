@@ -6,14 +6,14 @@ Declare a function called theCoders that takes a driver and a navigator as argum
 Where Nella represents the first argument passed in and Tom the second.
 When you've set that up, invoke the function to see if it works.
 */
-console.log("Iteration 01");
+console.log("Iteration 01"); //Rubrik för uppgift 1
 const theCoders = (driver, navigator) => {
   console.log(
     `The awesome coders for today is the driver ${driver} and the navigator ${navigator}`
   );
 };
 theCoders("nella", "tom");
-console.log("----");
+console.log("----"); //Slut på uppgift 1
 
 /*
   2)
@@ -43,7 +43,7 @@ const coderComparison = (driver, navigator) => {
 };
 coderComparison("nella", "tom");
 coderComparison("nella", "michelangelo");
-coderComparison("mathilda", "nella");
+coderComparison("nella", "nella");
 console.log("----");
 
 /*
@@ -57,8 +57,9 @@ console.log("----");
   Add as many conditonals as you want.
   */
 
+  
+//tellMeYourAge();
 console.log("Iteration 04");
-
 console.log("---- Version 01");
 console.log("Using if-else-if-else statements");
 let tellMeYourAge = () => {
@@ -76,8 +77,8 @@ let tellMeYourAge = () => {
     console.log(`Sit back and relax!`);
   }
 };
-//tellMeYourAge();
 
+//tellMeYourAgeSwitch();
 console.log("---- Version 02");
 console.log("Using switch");
 let tellMeYourAgeSwitch = () => {
@@ -100,33 +101,31 @@ let tellMeYourAgeSwitch = () => {
     default:
       console.log(`Sit back and relax!`);
       break;
-  }
+  } 
 };
 
-//tellMeYourAgeSwitch();
-console.log("----");
 
+//tellMeYourAgeTernary();
+
+console.log("----");
 console.log("---- Version 03");
 console.log("Using a ternary operator");
 let tellMeYourAgeTernary = () => {
   let userAge = prompt("How old are you? - Using Ternary");
   console.log(userAge);
 
-  userAge === "21"
-    ? console.log("You are 21 years old! - to be young")
-    : userAge >= 21 && userAge <= 30
-    ? console.log("Enjoy your 20's - :)")
-    : userAge >= 31 && userAge <= 80
-    ? console.log("Always try to stay active both physically and mentally!")
-    : userAge < 20
-    ? console.log("Enjoy your early School years")
-    : console.log("Sit back and relax!");
+  userAge === "21" 
+  ? console.log("You are 21 years old! - to be young") : userAge >= 21 && userAge <= 30
+    ? console.log("Enjoy your 20's - :)") : userAge >= 31 && userAge <= 80
+    ? console.log("Always try to stay active both physically and mentally!") : userAge < 20
+    ? console.log("Enjoy your early School years") : console.log("Sit back and relax!");
 };
+//tellMeYourAgeTernary()
 
-//tellMeYourAgeTernary();
 
-console.log("---- Version 03");
+console.log("---- Version 04");
 console.log("Using if-else-if-else statements with typeChecking");
+
 let tellMeYourAgeWithValidation = () => {
   let userAge = prompt("How old are you? - With Validation");
 
@@ -142,7 +141,7 @@ let tellMeYourAgeWithValidation = () => {
   userAge = parseInt(userAge);
 
   if (userAge === 21) {
-    console.log("You are 21 years old! - to be young");
+    alert(`You are ${userAge} years old! - to be young`);
   } else if (userAge >= 21 && userAge <= 30) {
     console.log("Enjoy your 20's - :)");
   } else if (userAge >= 31 && userAge <= 80) {
@@ -153,30 +152,29 @@ let tellMeYourAgeWithValidation = () => {
     console.log("Sit back and relax!");
   }
 };
-
-//tellMeYourAgeWithValidation();
+tellMeYourAgeWithValidation();
 console.log("----");
 
-console.log("Iteration 05");
-const calculationTest = () => {
-  let calculationString = prompt("what is 5 + 6?");
-  let calculationNumber = parseInt(calculationString);
-  if (calculationNumber === 11) {
-    console.log("Yay Correct");
-  } else {
-    console.log("Noooo, the answer is 11");
-  }
-  /*
-    5)
-    In this function we want to give the user a mathematical calculation to 
-    give us the answer to. Something like prompt('What is 5 + 6?')  
-    If the answer is correct, congratulate the user. 'Yay! Correct'
-    If not, give the user the correct answer so they can learn. 'Noooo, the answer is 11'
-    You choose if to use addition, subtraction, multiplication or division. 
-    */
-};
-calculationTest(10, 20);
-console.log("----");
+// console.log("Iteration 05");
+// const calculationTest = () => {
+//   let calculationString = prompt("what is 5 + 6?");
+//   let calculationNumber = parseInt(calculationString);
+//   if (calculationNumber === 11) {
+//     console.log("Yay Correct");
+//   } else {
+//     console.log("Noooo, the answer is 11");
+//   }
+//   /*
+//     5)
+//     In this function we want to give the user a mathematical calculation to 
+//     give us the answer to. Something like prompt('What is 5 + 6?')  
+//     If the answer is correct, congratulate the user. 'Yay! Correct'
+//     If not, give the user the correct answer so they can learn. 'Noooo, the answer is 11'
+//     You choose if to use addition, subtraction, multiplication or division. 
+//     */
+// };
+// calculationTest(10, 20);
+// console.log("----");
 /*
   6) **BONUS**
   Make the calculation machine we just made show random calculations everytime you invoke the function.

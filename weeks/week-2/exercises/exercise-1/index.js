@@ -13,7 +13,7 @@ themeRadios.forEach((radio) => {
 
     // Check the value of the currently selected radio button (using 'this') and set the "color" variable accordingly.
     if (this.value === "dark") {
-      color = "darkgray";
+      color = "darkgrey";
     } else if (this.value === "light") {
       color = "lightblue";
     } else if (this.value === "crazy") {
@@ -37,3 +37,4 @@ themeRadios.forEach((radio) => {
     }, 300); // 300 milliseconds delay.
   });
 });
+ 
