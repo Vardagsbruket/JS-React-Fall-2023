@@ -19,23 +19,43 @@ const pokemons = [
 const countThem = () => {
   // print out, in a sentence, how many pokemons I have.
   // like: "I have x pokemons!"
+  console.log(`I have ${pokemons.length} pokemons`)
 };
+countThem() 
+
+//QEUSTION! Why do we need () after sort but not after lenght (above)?
 
 const orderThem = () => {
   // order the pokemons alphabetically
+  
+  console.log(pokemons.sort())
 };
+//orderThem()
 
 const flipThem = () => {
   // reverse the order of the pokemons
+  console.log(pokemons.reverse())
 };
+//flipThem()
+
+//QUESTION! What does map do in the example below??
 
 const makeThemBig = () => {
   // print the pokemons in UPPERCASE letters
+  const pokemonToUpp = pokemons.map(element => {return element.toUpperCase()});
+  //let pokemonToUpp = String.prototype.toUpperCase.apply(pokemons).split(",");  THIS Also works.
+
+  console.log(pokemonToUpp)
 };
+//makeThemBig()
 
 const onlyTheBs = () => {
   // only print the pokemons that starts with B
+  const startsWithB = pokemons.filter((pokemon) => pokemon.startsWith("B"));
+  console.log(startsWithB);
 };
+
+onlyTheBs()
 
 const notTheCs = () => {
   // remove all pokemons that starts with C

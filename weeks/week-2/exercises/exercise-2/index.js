@@ -65,7 +65,8 @@ console.log("Using if-else-if-else statements");
 let tellMeYourAge = () => {
   let userAge = prompt("How old are you? - Regular Conditional");
   console.log(userAge);
-  if (userAge === 21) {
+  console.log(typeof userAge);
+  if (userAge === 21) { //this does not work as userAge is a string, not a number. If changed to == it will accept and the first "if" will also work.
     console.log(`You are 21 years old! - to be young`);
   } else if (userAge >= 21 && userAge <= 30) {
     console.log(`Enjoy your 20's - :)`);
@@ -77,6 +78,7 @@ let tellMeYourAge = () => {
     console.log(`Sit back and relax!`);
   }
 };
+tellMeYourAge()
 
 //tellMeYourAgeSwitch();
 console.log("---- Version 02");
@@ -136,10 +138,11 @@ let tellMeYourAgeWithValidation = () => {
     tellMeYourAgeWithValidation();
     return;
   }
+console.log(typeof userAge);
 
   // The userAge is a valid number, proceed with the logic
   userAge = parseInt(userAge);
-
+ 
   if (userAge === 21) {
     alert(`You are ${userAge} years old! - to be young`);
   } else if (userAge >= 21 && userAge <= 30) {
